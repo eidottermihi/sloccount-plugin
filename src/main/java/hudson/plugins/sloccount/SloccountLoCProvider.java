@@ -10,16 +10,20 @@ import org.jenkinsci.plugins.codehealth.LinesOfCodeProvider;
  */
 @Extension
 public class SloccountLoCProvider extends LinesOfCodeProvider {
-    
+
     @Override
     public LinesOfCode getLOC(AbstractBuild<?, ?> build) {
-        SloccountBuildAction action = build.getAction(SloccountBuildAction.class);
+        final SloccountBuildAction action = build.getAction(SloccountBuildAction.class);
         if (action != null) {
             int fileCount = action.getResult().getStatistics().getFileCount();
             int lineCount = action.getResult().getStatistics().getLineCount();
-            LinesOfCode loc = new LinesOfCode(lineCount, fileCount);
-            return loc;
+            return new LinesOfCode(lineCount, fileCount);
         }
         return null;
+    }
+
+    @Override
+    public String getOrigin() {
+        return "sloccount";
     }
 }
