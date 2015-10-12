@@ -2,10 +2,9 @@ package hudson.plugins.sloccount;
 
 import hudson.Extension;
 import hudson.model.AbstractBuild;
-import org.jenkinsci.plugins.codehealth.LinesOfCode;
-import org.jenkinsci.plugins.codehealth.LinesOfCodeDescriptor;
-import org.jenkinsci.plugins.codehealth.LinesOfCodeProvider;
-import org.jenkinsci.plugins.database.PerItemDatabaseDescriptor;
+import org.jenkinsci.plugins.codehealth.provider.loc.LinesOfCode;
+import org.jenkinsci.plugins.codehealth.provider.loc.LinesOfCodeDescriptor;
+import org.jenkinsci.plugins.codehealth.provider.loc.LinesOfCodeProvider;
 import org.kohsuke.stapler.DataBoundConstructor;
 
 /**
