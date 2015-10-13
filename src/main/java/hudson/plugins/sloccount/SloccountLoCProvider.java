@@ -37,6 +37,14 @@ public class SloccountLoCProvider extends LinesOfCodeProvider {
         return super.getDescriptor();
     }
 
+    public String getBuildResultUrl() {
+        return SloccountBuildAction.URL_NAME;
+    }
+
+    public String getProjectResultUrl() {
+        return SloccountProjectAction.URL_NAME;
+    }
+
     @Extension
     public static class DescriptorImpl extends LinesOfCodeDescriptor {
 
