@@ -50,7 +50,7 @@ public class SloccountLoCProvider extends LinesOfCodeProvider {
 
         @Override
         public String getDisplayName() {
-            return "sloccount";
+            return "SLOCCount";
         }
 
     }
